@@ -227,20 +227,3 @@ df_filter_data_for_training.to_csv('training_data_set_filter.csv');
 
 
 
-"""
-#data extractor from csv file
-data=pd.read_csv('../smallData/training_data_set_filter.csv',keep_default_na=False);
-X=data[list(data.columns)[-13:-1]];
-Y=data['hitflop'];
-input_x=X.values.astype(float);
-output_y=np.reshape(Y.values,(-1,1)).astype(float);
-model=LinearRegression();
-x_train,x_test,y_train,y_test=train_test_split(input_x,output_y);
-model.fit(x_train,y_train);
-
-print("Movie Prediction System\n");
-while(True):
-    mov_name=input("Name of the movie : ");
-    actor_name=input("Actor & Actress : ");
-    director_name=input("Directors : ");
-"""
